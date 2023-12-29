@@ -1,0 +1,113 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Fond blanc */
+  color: #333;
+}
+
+/* Styles de la barre de navigation */
+nav {
+  background-color: #ff9800; /* Orange */
+  overflow: hidden;
+  display: flex;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #fff; /* Blanc */
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #f57c00; /* Nuance d'orange plus foncé */
+}
+
+nav a.active {
+  background-color: #d84315; /* Nuance d'orange plus foncé pour l'élément actif */
+}
+
+/* Style du contenu principal */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content h2 {
+  color: #333;
+  text-align: center;
+}
+
+/* Styles de la section Équipe */
+.section-equipe {
+  background: #ffd6b8; /* Couleur de fond légère pour la section */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.membre-equipe {
+  width: 22%; /* Ajustez cette valeur pour changer la largeur des éléments */
+  margin: 1%; /* Espacement autour de chaque élément */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour chaque carte de membre */
+  text-align: center;
+  background-color: #ffffff; /* Fond blanc pour les cartes */
+}
+
+.membre-equipe img {
+  width: 60%; /* Les images prennent toute la largeur du conteneur */
+  height: auto; /* Hauteur automatique pour maintenir le ratio */
+  margin-top: 10px;
+}
+
+.membre-equipe h3 {
+  margin: 10px 0;
+  font-size: 1.2em; /* Taille de la police pour le nom du membre */
+}
+
+.membre-equipe p {
+  padding: 0 10px 10px;
+  font-size: 1em; /* Taille de la police pour la description */
+}
+
+/* Responsive Design pour les membres de l'équipe */
+@media (max-width: 768px) {
+  .membre-equipe {
+    width: 50%; /* Augmente la largeur pour les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .membre-equipe {
+    width: 96%; /* Pleine largeur pour les très petits écrans */
+    margin: 2% auto; /* Ajoute un peu d'espace sur les côtés */
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 24px;
+  background-color: white;
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px; /* Définissez la largeur fixe */
+  height: 400px; /* Définissez la hauteur fixe */
+  margin: 10px; /* Ajoutez une marge autour de chaque carte */
+}
+
+/* Styles pour le contenu des cartes (.content) */
+.content {
+  flex: 3 1 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 16px;
+}

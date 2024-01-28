@@ -1,0 +1,40 @@
+/* Styles de la barre de navigation */
+nav {
+  background-color: #ff9800;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Styles de la section Équipe */
+.section-equipe {
+  background: #ff9c60; /* Couleur d'arrière-plan différente pour la section Équipe */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 100%; /* Modifier cette ligne */
+}
+
+/* Ajustements pour les membres de l'équipe */
+.membre-equipe {
+  width: 22%;
+  margin: 1%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* Ajustements pour les très petits écrans */
+@media (max-width: 480px) {
+  .membre-equipe {
+    width: 96%;
+    margin: 2% auto;
+  }
+}
+
+body {
+  background: #ff9c60;
+  margin: 0; /* Pour s'assurer qu'il n'y a pas de marges par défaut qui peuvent interférer */
+}

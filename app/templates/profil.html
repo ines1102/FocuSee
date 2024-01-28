@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - FocuSee</title>
+    <link rel="stylesheet" type="text/css" href="static/CSS/profil.css" />
+    <link rel="stylesheet" type="text/css" href="static/CSS/index.css" />
+    <link rel="stylesheet" type="text/css" href="static/CSS/burger.css" />
+
+    <!-- Ajoutez d'autres liens vers des feuilles de style, des bibliothèques, etc., au besoin -->
+  </head>
+  <body>
+    <header>
+      <!-- Ajoutez votre en-tête (barre de navigation, titre, etc.) ici -->
+    </header>
+
+    <div class="container">
+      <h1>User Profile</h1>
+      <div id="profile-info">
+        <p><strong>Name:</strong> {{ user.name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <!-- Add other user information as needed -->
+      </div>
+      <div id="profile-actions">
+        <button onclick="toggleEditForm()">Edit Profile</button>
+      </div>
+      <div id="edit-form" style="display: none">
+        <form action="{{ url_for('update_profile') }}" method="post">
+          <label for="new-email">New Email:</label>
+          <input type="email" id="new-email" name="new-email" required />
+          <label for="new-password">New Password:</label>
+          <input
+            type="password"
+            id="new-password"
+            name="new-password"
+            required
+          />
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+    </div>
+
+    <
+    <footer>
+      <div class="footer-line"></div>
+      <div class="footer-wrapper">
+        <section class="footer-top">
+          <div class="footer-headline">
+            <h2>Subscribe to our newsletter</h2>
+            <p>Stay up to date with our news and articles</p>
+          </div>
+          <div class="footer-subscribe">
+            <form action="PHP/newsletter.php" method="POST">
+              <input
+                type="email"
+                name="email"
+                spellcheck="false"
+                placeholder="Your Email"
+              />
+              <button id="sign_up">Sign Up</button>
+            </form>
+          </div>
+        </section>
+        <div class="footer-columns">
+          <section class="footer-logo">
+            <h2>
+              <img
+                src="static/Images/logo.png"
+                alt="Logo"
+                style="width: 200px; height: auto"
+              />
+            </h2>
+          </section>
+          <section>
+            <h3>Produit</h3>
+            <ul>
+              <li>
+                <a href="#" title="API">API</a>
+              </li>
+              <li>
+                <a href="#" title="Pricing">Pricing</a>
+              </li>
+              <li>
+                <a href="#" title="Documentation">Documentation</a>
+              </li>
+              <li>
+                <a href="#" title="Release Notes">Release Notes</a>
+              </li>
+              <li>
+                <a href="#" title="Status">Statut</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Ressources</h3>
+            <ul>
+              <li>
+                <a href="#" title="Support">Support</a>
+              </li>
+              <li>
+                <a href="#" title="Sitemap">Sitemap</a>
+              </li>
+              <li>
+                <a href="#" title="Newsletter">Newsletter</a>
+              </li>
+              <li>
+                <a href="#" title="Help Centre">Centre d'aide</a>
+              </li>
+              <li>
+                <a href="#" title="Investor">Investisseur</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Compagnie</h3>
+            <ul>
+              <li>
+                <a href="about.html" title="About Us">A propos</a>
+              </li>
+              <li>
+                <a href="#" title="Blog">Blog</a>
+              </li>
+              <li>
+                <a href="#" title="Careers">Carrière</a>
+              </li>
+              <li>
+                <a href="#" title="Press">Press</a>
+              </li>
+              <li>
+                <a href="contact.html" title="Contact">Contact</a>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Legal</h3>
+            <ul>
+              <li>
+                <a href="#" title="Terms and services"> Terms </a>
+              </li>
+              <li>
+                <a href="#" title="Privacy Policy"> Privacy </a>
+              </li>
+              <li>
+                <a href="#" title="Cookies"> Cookies </a>
+              </li>
+              <li>
+                <a href="#" title="Licenses"> Licenses </a>
+              </li>
+              <li>
+                <a href="#" title="Cookies"> Contact </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div class="footer-bottom">
+          <div class="social-links">
+            <ul>
+              <li>
+                <a href="#" title="Instagram">
+                  <img src="static/Images/instagram.png" alt="Instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Linkedin">
+                  <img src="static/Images/linkedin.png" alt="Linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Twitter">
+                  <img src="static/Images/twitter.png" alt="Twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Youtube">
+                  <img src="static/Images/youtube.png" alt="YouTube" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/ines1102/FocuSee"
+                  target="_blank"
+                  title="GitHub"
+                >
+                  <img src="static/Images/github.png" alt="GitHub" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <small
+            >© FocuSee MESPI 2023. <span id="year"></span>, All rights
+            reserved</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="static/Javascript/profil.js"></script>
+    <!-- Ajoutez d'autres scripts au besoin -->
+  </body>
+</html>

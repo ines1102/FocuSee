@@ -1,0 +1,68 @@
+/* Style pour la section FAQ */
+.faq-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.toggle-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  z-index: 2; /* Ajout de cette ligne - assure que l'icône est au premier plan */
+}
+
+.toggle-icon img {
+  width: 20px;
+  height: auto;
+  transition: transform 0.3s ease-out; /* Ajout de cette ligne - ajoute une transition à l'icône */
+}
+
+.question {
+  background-color: #ff9c60;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  position: relative; /* Ajout de cette ligne */
+  z-index: 1; /* Ajout de cette ligne - assure que la question est sous l'icône */
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 10px;
+}
+
+.question.active {
+  background-color: #2a2a2a;
+}
+
+.faq-section {
+  margin-top: 40px;
+}
+
+.faq-item h3 {
+  color: #ff8c00;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}

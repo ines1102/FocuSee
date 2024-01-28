@@ -1,0 +1,58 @@
+/* notif.css */
+
+:root {
+  --notification-background-success: #2ecc71;
+  --notification-text-success: #000000;
+  --notification-background-error: #e74c3c;
+  --notification-text-error: #000000;
+}
+
+.notification {
+  position: absolute;
+  width: max-content;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in 3s linear;
+}
+
+.notification__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 8px;
+}
+
+.notification__icon {
+  height: 26px;
+  width: 26px;
+  margin-right: 4px;
+}
+
+.notification.success {
+  background-color: var(--notification-background-success);
+}
+
+.notification.error {
+  background-color: var(--notification-background-error);
+}
+
+@keyframes fade-in {
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  95% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
